@@ -15,15 +15,15 @@ full_name = {'first_name': 'Jansenio', 'last_name': 'Amado'}
 print('Entire dictionary:',full_name)
 
 # accessing the keys...
-keys = [k for k in full_name.keys()]
+keys = list(full_name.keys())
 print('\nkeys:',keys)
 
 # accessing the values...
-values = [v for v in full_name.values()]
+values = list(full_name.values())
 print('\nvalues:', values)
 
 # accessing both keys and values...
-key_val = [(k, v) for (k, v) in full_name.items()]
+key_val = list(full_name.items())
 print('\nKey-value pairs:', key_val)
 
 # printing the full name as a string ...
@@ -33,7 +33,8 @@ print('\nFull name:',(' ').join(values))
 print('\nFirst name:',(' ').join(values)[:8])
 
 # printing the last name...
-print('\nLast name:',(' ').join(values)[-5:]);print()
+print('\nLast name:',(' ').join(values)[-5:])
+print()
 
 print('''
 **********************************************************      
@@ -43,16 +44,16 @@ print('''
 
 name_dict = {'first_name':{'Jansenio':'compassion, creativity, generosity, loyalty, love'},\
              'last_name':{'Amado':'seriousness, thought, intuition, intent, wisdom'}}
-    
-print('>> Entire dictionary:', name_dict); print()
+
+print('>> Entire dictionary:', name_dict)
+print()
 #print(name_dict.keys())
 
 
 # To print the keys of the outer dictionary...
-outer_keys = []
-for k in name_dict.keys():
-    outer_keys.append(k)
-print('>> Outer keys:', outer_keys); print() 
+outer_keys = list(name_dict)
+print('>> Outer keys:', outer_keys)
+print() 
 # It will print a list with "First" and "Last".
        
 
@@ -69,11 +70,10 @@ def rec_keys(dictionary):
 print('>> Inner keys:', rec_keys(name_dict))
 
 # To print the values of the outer dictionary...
-outer_values = []
-for k in name_dict.values():
-    outer_values.append(k)
+outer_values = list(name_dict.values())
 # It will print a list with 2 dictionaries.  
-print('\n>> Outer values:', outer_values); print() 
+print('\n>> Outer values:', outer_values)
+print() 
 
 # To print the values of the inner dictionary...
 def rec_keys(dictionary):
